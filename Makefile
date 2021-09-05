@@ -6,6 +6,9 @@ run: check
 build: check
 	cargo build
 
+release: check
+	cargo build --release
+
 check:
 	cargo check
 
