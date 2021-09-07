@@ -1,6 +1,5 @@
 [package]
 name = "rust-training"
 version = "0.0.1"
-authors = ["itsubaki <1759459+itsubaki@users.noreply.github.com>"]
 
 [dependencies]
