@@ -9,6 +9,9 @@ build: check
 release: check
 	cargo build --release
 
+update:
+	cargo update
+
 check:
 	cargo check
 
