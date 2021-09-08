@@ -1,7 +1,5 @@
 fn main() {
     let mut foo = 42;
-    println!("{}", foo);
-
     let f = &mut foo;
     // println!("{}", foo); // cannot borrow `foo` as immutable because it is also borrowed as mutable
 
