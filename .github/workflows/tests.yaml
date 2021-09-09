@@ -28,7 +28,3 @@ jobs:
       - name: Build
         run: |
           make build
-
-      - name: Release
-        run: |
-          make release
