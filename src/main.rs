@@ -1,11 +1,16 @@
-fn main() {
-    let mut foo = 42;
-    let f = &mut foo;
-    // println!("{}", foo); // cannot borrow `foo` as immutable because it is also borrowed as mutable
+#![no_std]
+#![no_main]
+#![feature(abi_efiapi)]
 
-    let bar = *f; // bar -> 42
-    *f = 13; // foo -> 13
+extern crate uefi_services;
 
-    println!("{}", bar);
-    println!("{}", foo);
+use core::fmt::Write;
+use uefi::prelude::*;
+
+#[entry]
+fn efi_main(_image: Handle, st: SystemTable<Boot>) -> Status {
+    st.stdout().reset(false).unwrap_success();
+    writeln!(st.stdout(), "Hello, World!").unwrap();
+
+    loop {}
 }
