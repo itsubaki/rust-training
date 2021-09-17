@@ -25,6 +25,7 @@ install:
 	rustup component add llvm-tools-preview
 	cargo install bootimage
 	brew install qemu
+	brew reinstall qemu
 
 qemu:
 	qemu-system-x86_64 -drive format=raw,file=target/x86_64/debug/bootimage-rust-training.bin
