@@ -1,2 +1,1 @@
-# rust-training
-Rust training
+# x86_64-rust

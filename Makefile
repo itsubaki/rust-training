@@ -20,12 +20,12 @@ rustup:
 
 install:
 	rustup install nightly
-	rustup override add nightly
+	rustup override  add nightly
 	rustup component add rust-src --toolchain nightly-x86_64-apple-darwin
 	rustup component add llvm-tools-preview
 	cargo install bootimage
-	brew install qemu
+	brew install   qemu
 	brew reinstall qemu
 
 qemu:
-	qemu-system-x86_64 -drive format=raw,file=target/x86_64/debug/bootimage-rust-training.bin
+	qemu-system-x86_64 -drive format=raw,file=target/x86_64/debug/bootimage-x86_64-rust.bin

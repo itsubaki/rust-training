@@ -1,5 +1,5 @@
 [package]
-name = "rust-training"
+name = "x86_64-rust"
 version = "0.0.1"
 edition = "2018"
 
